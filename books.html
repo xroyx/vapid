@@ -1,0 +1,33 @@
+{{ > head }}
+
+    {{ > dynamic }}
+
+    <main role="main">
+        <ul class="l-book">
+            {{# section 2017 label="2017" multiple=true sortable=true }}
+                <li class="book book--subtitle">
+                    <div class="book__container">
+                        <div class="book__title" title="{{ title }} {{ #if subtitle }} - {{ subtitle }} {{ /if }}">
+                            {{ title }}
+                            {{ #if subtitle }}
+                                <span class="book__subtitle">{{ subtitle required=false }}</span>
+                            {{ /if }}
+                        </div>
+                        <span class="book__author" title="{{ author }}">{{ author }}</span>
+                    </div>
+                </li>
+            {{/ section }}
+        </ul>
+
+        <blockquote class="quote">
+            <div class="quote__container">
+                <p>I often carry things to read so that I will not have to look at the people.</p>
+                <footer class="quote__footer">
+                    <span class="quote__author">Charles Bukowski</span>
+                    <span class="quote__source">— A Poet in New York</span>
+                </footer>
+            </div>
+        </blockquote>
+    </main>
+
+{{ > footer }}

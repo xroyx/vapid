@@ -1,0 +1,11 @@
+<header role="banner">
+    <nav class="navigation" role="navigation">
+        <ul class="menu navigation__container">
+            {{ #section books }}
+            <li class="menu__item">
+                <a href="{{ _permalink }}" class="menu__link">{{ year }}</a>
+            </li>
+            {{ /section }}
+        </ul>
+    </nav>
+</header>
