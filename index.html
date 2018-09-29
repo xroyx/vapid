@@ -4,16 +4,20 @@
 
     <main role="main">
         <ul class="l-book">
-            <li class="book book--subtitle">
-                <div class="book__container">
-                    <div class="book__title" title="The Father-Thing - The Collected Stories of Philip K. Dick: Volume III">
-                        The Father-Thing
-                        <span class="book__subtitle">The Collected Stories of Philip K. Dick: Volume III</span>
+            {{# section 2018 label="2018" multiple=true sortable=true }}
+                <li class="book book--subtitle">
+                    <div class="book__container">
+                        <div class="book__title" title="{{ title }}{{ #if subtitle }} - {{ subtitle }}{{ /if }}">
+                            {{ title }}
+                            {{ #if subtitle }}
+                                <span class="book__subtitle">{{ subtitle required=false }}</span>
+                            {{ /if }}
+                        </div>
+                        <span class="book__author" title="{{ author }}">{{ author }}</span>
+                        <!-- <span class="book__rating">{{ rating type=choice input=dropdown options=1,2,3,4,5 }}</span> -->
                     </div>
-                    <span class="book__author" title="Philip K. Dick">Philip K. Dick</span>
-                    <span class="book__rating">+++</span>
-                </div>
-            </li>
+                </li>
+            {{/ section }}
         </ul>
 
         <blockquote class="quote">
